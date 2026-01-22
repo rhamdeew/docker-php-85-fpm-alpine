@@ -9,9 +9,9 @@ RUN apk add --no-cache --virtual build-essentials \
     docker-php-ext-install mysqli && \
     docker-php-ext-install pdo_mysql && \
     docker-php-ext-install intl && \
-    docker-php-ext-install opcache && \
     docker-php-ext-install exif && \
     docker-php-ext-install zip && \
+#    docker-php-ext-install opcache && \
     apk del build-essentials && rm -rf /usr/src/php*
 
 RUN wget https://getcomposer.org/composer-stable.phar -O /usr/local/bin/composer && chmod +x /usr/local/bin/composer
